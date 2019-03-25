@@ -1,7 +1,7 @@
 module Main exposing (Model, Msg(..), init, main, update, view)
 
 import Browser
-import Chessboard exposing (Board, newBoard)
+import Chess exposing (GameState, init)
 import Html exposing (Html, table)
 
 
@@ -14,12 +14,12 @@ main =
 
 
 type alias Model =
-    Board
+    GameState
 
 
 init : Model
 init =
-    newBoard
+    Chess.init
 
 
 
